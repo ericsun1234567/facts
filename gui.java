@@ -135,7 +135,7 @@ public class gui extends JFrame {
 		rdbtnNewRadioButton_2.setBounds(39, 180, 63, 23);
 		contentPane.add(rdbtnNewRadioButton_2);
 		
-		JRadioButton rdbtnNewRadioButton_3 = new JRadioButton("all");
+		JRadioButton rdbtnNewRadioButton_3 = new JRadioButton("all");                                  //
 		rdbtnNewRadioButton_3.setBounds(127, 179, 109, 23);
 		contentPane.add(rdbtnNewRadioButton_3);
 		
@@ -147,13 +147,7 @@ public class gui extends JFrame {
 		
 		JButton btnSearch = new JButton("search");
 		btnSearch.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				
-		            textField_1.setText(textField.getText() + textField_1.getText());
-		 
-		            // set the text of field to blank
-		            textField.setText("  ");
-			}
+		
 		});
 		btnSearch.setBounds(0, 224, 78, 26);
 		contentPane.add(btnSearch);
@@ -176,47 +170,11 @@ public class gui extends JFrame {
 		contentPane.add(textField_1);
 		textField_1.setColumns(10);
 		
-		textField_2 = new JTextField();
-		textField_2.setBounds(250, 159, 174, 64);
-		contentPane.add(textField_2);
-		textField_2.setColumns(10);
+		
 		
 		JButton btnNewButton_1 = new JButton("Add New Fact");
 		btnNewButton_1.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-				
-				
-				File output = new File("textfile.txt");
-				FileWriter writer = null;
-				try {
-					writer = new FileWriter(output);
-				} catch (IOException e3) {
-					// TODO Auto-generated catch block
-					e3.printStackTrace();
-				}
-
-				try {
-					writer.write(textField_2.getText());
-				} catch (IOException e2) {
-					// TODO Auto-generated catch block
-					e2.printStackTrace();
-				}
-				try {
-					writer.flush();
-				} catch (IOException e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
-				}
-				try {
-					writer.close();
-				} catch (IOException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-				 
-		            // set the text of field to blank
-		            textField_2.setText("  ");
-			}
+			
 		});
 		btnNewButton_1.setBounds(335, 236, 89, 25);
 		contentPane.add(btnNewButton_1);
