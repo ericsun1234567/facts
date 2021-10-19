@@ -147,7 +147,13 @@ public class gui extends JFrame {
 		
 		JButton btnSearch = new JButton("search");
 		btnSearch.addActionListener(new ActionListener() {
-			
+			public void actionPerformed(ActionEvent e) {
+				
+		            textField_1.setText(textField.getText() + textField_1.getText());                  //
+		 
+		            // set the text of field to blank
+		            textField.setText("  ");
+			}
 		});
 		btnSearch.setBounds(0, 224, 78, 26);
 		contentPane.add(btnSearch);
