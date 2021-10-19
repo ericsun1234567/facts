@@ -147,7 +147,7 @@ public class gui extends JFrame {
 		
 		JButton btnSearch = new JButton("search");
 		btnSearch.addActionListener(new ActionListener() {
-		
+			
 		});
 		btnSearch.setBounds(0, 224, 78, 26);
 		contentPane.add(btnSearch);
@@ -174,7 +174,40 @@ public class gui extends JFrame {
 		
 		JButton btnNewButton_1 = new JButton("Add New Fact");
 		btnNewButton_1.addActionListener(new ActionListener() {
-			
+			public void actionPerformed(ActionEvent arg0) {
+				
+				
+				File output = new File("textfile.txt");
+				FileWriter writer = null;
+				try {
+					writer = new FileWriter(output);
+				} catch (IOException e3) {
+					// TODO Auto-generated catch block
+					e3.printStackTrace();
+				}
+
+				try {
+					writer.write(textField_2.getText());
+				} catch (IOException e2) {
+					// TODO Auto-generated catch block
+					e2.printStackTrace();
+				}
+				try {
+					writer.flush();
+				} catch (IOException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+				try {
+					writer.close();
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				 
+		            // set the text of field to blank
+		            textField_2.setText("  ");
+			}
 		});
 		btnNewButton_1.setBounds(335, 236, 89, 25);
 		contentPane.add(btnNewButton_1);
