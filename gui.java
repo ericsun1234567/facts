@@ -170,7 +170,10 @@ public class gui extends JFrame {
 		contentPane.add(textField_1);
 		textField_1.setColumns(10);
 		
-		
+		textField_2 = new JTextField();                                                             //
+		textField_2.setBounds(250, 159, 174, 64);
+		contentPane.add(textField_2);
+		textField_2.setColumns(10);
 		
 		JButton btnNewButton_1 = new JButton("Add New Fact");
 		btnNewButton_1.addActionListener(new ActionListener() {
