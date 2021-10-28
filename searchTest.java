@@ -34,4 +34,19 @@ void TestA2B1C1() {
 	assertEquals(0,b1);
 	assertEquals(0,c1);
 }
+@Test
+void TestA3B1C1() {
+	FactList a = new FactList();
+	int mode = 0;
+	String query = "";
+	FactList result = a.search(query, mode);
+	int a1 = 5;
+	int b1 = mode;
+	int c1 = query.length();
+	assertTrue(a1 > 1);
+	assertEquals(0,b1);
+	assertEquals(0,c1);
+}
+
+
 }
