@@ -86,6 +86,18 @@ void TestA1B4C1() {
 	assertEquals(3,b1);
 	assertEquals(0,c1);
 }
-
+@Test
+void TestA1B1C2() {
+	FactList a = new FactList();
+	int mode = 0;
+	String query = "Glass";
+	FactList result = a.search(query, mode);
+	int a1 = 0;
+	int b1 = mode;
+	int c1 = query.length();
+	assertEquals(0,a1);
+	assertEquals(0,b1);
+	assertTrue(c1> 0);
+}
 
 }
